@@ -13,7 +13,7 @@ class Homepage extends Component {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere metus urna, ac aliquet arcu suscipit nec. Aliquam a magna quis ipsum tristique consectetur non eu leo. Proin scelerisque diam libero, sit amet congue erat efficitur ac. Phasellus ut dui vulputate, pretium lorem id, congue nisi. Donec non ex mattis, condimentum nibh id, dictum velit. Aliquam dignissim efficitur quam quis auctor. Fusce a lacus varius, tristique magna gravida, sagittis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur semper justo libero, vel porta turpis viverra non. Pellentesque at dolor at ex ornare ultrices sit amet in tellus. Phasellus quis aliquam turpis.</p>
         </header>
         <div className="container-searchbox">
-          <img src={logo} />
+          <img src={logo} alt="logo"/>
           <div className="search-container">
             <form action="/action_page.php">
               <input type="text" placeholder="Search by name or address..." name="search" style={{width: '50%'}}/>
@@ -23,13 +23,13 @@ class Homepage extends Component {
         </div>
         <div className="categories-ctn">
           <div className="categories">
-            <img src={garfo} />
+            <img src={garfo} alt="garfo"/>
           </div>
           <div className="categories">
-            <img src={cama} />
+            <img src={cama} alt="cama"/>
           </div>
           <div className="categories">
-            <img src={cinema} />
+            <img src={cinema} alt="cinema"/>
           </div>
         </div>
         <footer className="footer">
