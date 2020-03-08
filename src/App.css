@@ -37,7 +37,11 @@
   }
 }
 
-.btn-sec {
+body {
+  font-family: "Roboto-Mono", sans-serif;
+  background: url(https://www.ironhack.com/assets/icons/background/hexagon.svg)
+    no-repeat;
+  background-color: rgb(248, 248, 248);
 }
 
 .main-container {
@@ -48,4 +52,78 @@
   display: flex;
   flex-direction: row;
   padding: 32px 0 64px;
+}
+
+.btnadmcontainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.admbtn {
+  padding: 50px;
+  background-color: #2dc5fa;
+  font-size: 20px;
+  color: #fff;
+}
+
+.container-description {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 80px;
+  margin: 0 100px;
+}
+
+.container-description p {
+  color: rgba(45, 53, 76, 0.6);
+  font: 20px Roboto;
+  text-align: justify;
+}
+
+.container-searchbox {
+  background-image: url(home-img.jpg);
+  margin-top: 150px;
+}
+
+.container-searchbox img {
+  padding: 50px 0 30px;
+  width: 10%;
+}
+
+.search-container {
+  padding: 20px 0 150px;
+}
+
+.search-container input {
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.search-container button {
+  height: 40px;
+  border-radius: 5px;
+  background-color: #2dc5fa;
+  color: #fff;
+}
+
+.categories-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #fff;
+  margin: 0 100px;
+  z-index: -10;
+}
+
+.categories {
+  padding: 20px;
+}
+
+.categories:hover {
+  color: rgb(45, 197, 250);
+  opacity: 80%;
+}
+
+.categories img {
+  width: 100px;
 }

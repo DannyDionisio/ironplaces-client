@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
 
 class Navbar extends Component {
@@ -7,15 +7,17 @@ class Navbar extends Component {
     return (
       <React.Fragment>
         <div className="navbar">
-          <img src={logo} alt="logo"/>
+          <Link to="/">
+            <img src={logo} alt="logo"/>
+          </Link>
           <h1>Ironplaces</h1>
           <div className="dropdown">
-            <button className="btn btn-sec dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Login
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a className="dropdown-item" href="/login/admin">Admin</a>
-              <a className="dropdown-item" href="/login/student">Student</a>
+              <Link to={`/login`} className="dropdown-item" href="/login/admin">Admin</Link>
+              <Link to={`/login`} className="dropdown-item" href="/login/student">Student</Link>
             </div>
           </div>
         </div>
