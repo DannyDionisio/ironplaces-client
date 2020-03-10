@@ -7,7 +7,7 @@ class AdminView extends Component {
       <React.Fragment>
         <h1>Admin View</h1>
         <div className="btnadmcontainer">
-          <Link to="/addironplace">
+          <Link to="/login/adminview/addironplace">
             <button className="admbtn">Add IronPlace</button>
           </Link>
           <Link to="/">

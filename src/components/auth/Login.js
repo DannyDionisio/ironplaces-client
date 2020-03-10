@@ -16,7 +16,7 @@ class Login extends Component {
     // this.props.history gets defined automatically inside of a <Route />
     // since we have access to history here, but not inside of App.js,
     // we can pass a "callback" function, which defines the function here, to be executed back in App.js
-    const callback = () => this.props.history.push('/projects');
+    const callback = () => this.props.history.push('/login/adminview');
     this.props.loginFbaseUser(email, password, callback);
   }
 
