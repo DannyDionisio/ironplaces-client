@@ -32,7 +32,6 @@ class Navbar extends Component {
           <Link to="/">
             <img src={logo} alt="logo"/>
           </Link>
-          <h1>Ironplaces</h1>
           <div className="dropdown">
             <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Login

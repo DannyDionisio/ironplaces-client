@@ -23,8 +23,9 @@ class AddIronplaces extends Component {
     const headers = {'Authorization': this.props.jwt};
     axios.post("http://localhost:5000/api/addplace", { name, type, address, coordinates, description }, {headers:headers})
     .then( () => {
-      this.props.getData();
       this.setState({name: "", type: "", address: "", coordinates: "", description: ""});
+      // after submitting the form, redirect to homepage
+      this.props.history.push('/');
     })
     .catch( error => console.log(error))
   }
@@ -44,9 +45,9 @@ class AddIronplaces extends Component {
             <label for="name">Name:</label>
             <input type="text" className="form-control" name="name" value={this.state.name} id="name" onChange={e => this.handleChange(e)}/>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label for="typeoptions">Type</label>
-            <select class="form-control" id="typeoptions" name="type" value={this.state.type} onChange={e => this.handleChange(e)}>
+            <select className="form-control" id="typeoptions" name="type" value={this.state.type} onChange={e => this.handleChange(e)}>
               <option>Restaurants</option>
               <option>Hotels</option>
               <option>Bars</option>
