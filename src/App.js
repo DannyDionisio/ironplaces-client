@@ -19,7 +19,10 @@ class App extends Component {
     // when loggedInUser is set from FireBase Auth,
     // it will be an object with lots of keys, two useful ones
     // we can use are: loggedInUser.uid and loggedInUser.email :)
-    this.state = { loggedInUser: null };
+    this.state = {
+      loggedInUser: null,
+      jwt: '',
+    };
   }
 
   componentDidMount() {
@@ -32,10 +35,23 @@ class App extends Component {
       messagingSenderId: "420598064107",
       appId: "1:420598064107:web:745862904ecfcf002c6fae",
     });
+
+    const loggedInUser = JSON.parse(window.sessionStorage.getItem('fbaseUser'));
+    const jwt = window.sessionStorage.getItem('fbaseJwt');
+    if (loggedInUser && jwt && !this.state.loggedInUser) {
+      this.setState({loggedInUser, jwt});
+    }
   }
 
-  saveUserToServer = (name, isAdmin, uId) => {
-
+  getJWT(user) {
+    user.getIdToken()
+    .then(resp => {
+      this.setState({jwt: resp});
+      // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+      window.sessionStorage.setItem('fbaseUser', JSON.stringify(user));
+      window.sessionStorage.setItem('fbaseJwt', resp);
+    })
+    .catch(err => console.log(err));
   }
 
   createNewFbaseUser = (email, password, callbackNavToProj) => {
@@ -44,7 +60,7 @@ class App extends Component {
     .then(resp => {
       // console.log(resp);
       this.setState({loggedInUser: resp.user});
-      // saveUserToServer();
+      this.getJWT(resp.user);
       callbackNavToProj();
     })
     .catch(err => alert(err));
@@ -59,6 +75,7 @@ class App extends Component {
       // this.props.history.push('/projects'); --> this will cause error
       // we do not have access to this.props.history here!
       // so we can use a calllback function instead :)
+      this.getJWT(resp.user);
       callbackNavToProj();
     })
     .catch(err => alert(err));
@@ -69,12 +86,16 @@ class App extends Component {
     firebase.auth().signOut()
     .then(resp => {
       console.log("User has been logged out", resp);
-      this.setState({loggedInUser: null});
+      this.setState({loggedInUser: null, jwt: ''});
+      window.sessionStorage.removeItem('fbaseUser');
+      window.sessionStorage.removeItem('fbaseJwt');
     })
     .catch(err => alert(err));
   }
   
   render() {
+    const {loggedInUser, jwt} = this.state;
+    const uid = loggedInUser ? loggedInUser.uid : null;
     return (
       <div className="App">
         <BrowserRouter>
@@ -87,9 +108,9 @@ class App extends Component {
             {/* <Route exact path="/projects" component={ProjectList}/>
             <Route exact path="/projects/:id" component={ProjectDetails} />
             <Route exact path="/projects/:id/tasks/:taskId" component={TaskDetails} /> */}
-            <Route exact path='/' render={(props) => <Homepage uid={this.state.loggedInUser} {...props} />}/>
-            <Route exact path='/login/adminview' render={(props) => <AdminView uid={this.state.loggedInUser} {...props} />}/>
-            <Route exact path='/login/adminview/addironplace' render={(props) => <AddIronplaces uid={this.state.loggedInUser} {...props} />}/>
+            <Route exact path='/' render={(props) => <Homepage uid={this.state.loggedInUser} jwt={jwt} {...props} />}/>
+            <Route exact path='/login/adminview' render={(props) => <AdminView uid={this.state.loggedInUser} jwt={jwt} {...props} />}/>
+            <Route exact path='/login/adminview/addironplace' render={(props) => <AddIronplaces uid={this.state.loggedInUser} jwt={jwt} {...props} />}/>
           </Switch>
         </BrowserRouter>
       </div>
