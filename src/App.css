@@ -42,6 +42,8 @@ body {
   background: url(https://www.ironhack.com/assets/icons/background/hexagon.svg)
     no-repeat;
   background-color: rgb(248, 248, 248);
+  background-position: 240px -900px;
+  background-size: 80%;
 }
 
 .main-container {
@@ -70,7 +72,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
   padding: 80px;
-  margin: 0 100px;
+  margin: 0 400px;
 }
 
 .container-description p {
@@ -126,4 +128,8 @@ body {
 
 .categories img {
   width: 100px;
+}
+
+.btn {
+  color: #fff;
 }
