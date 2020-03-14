@@ -133,3 +133,75 @@ body {
 .btn {
   color: #fff;
 }
+
+.btn:hover {
+  color: #2dc5fa;
+}
+
+.footer {
+  background-color: rgb(45, 53, 76);
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer h1 {
+  font-size: 25px;
+  color: #fff;
+  text-align: justify;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 0 0;
+}
+
+.allrights {
+  display: flex;
+  flex-direction: row;
+}
+
+.allrights p {
+  color: rgba(255, 255, 255, 0.4);
+  font: 12px Roboto;
+  margin: 10px 20px;
+}
+
+.footerimg, .floridactn {
+  display: flex;
+  flex-direction: row;
+}
+
+.floridactn p {
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.footerimg img {
+  padding-left: 10px;
+}
+
+.loginform, .signupform {
+  color: #fff;
+  margin: 0 35%;
+  flex-direction: column;
+  display: flex;
+}
+
+.formctn {
+  padding: 50px 0;
+}
+
+.form-group {
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.form-group label {
+  padding-right: 20px;
+}

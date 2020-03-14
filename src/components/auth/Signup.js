@@ -29,22 +29,25 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Email:</label>
-          <input type="text" name="email" value={this.state.username} onChange={ e => this.handleChange(e)}/>
-
-          <label>Password:</label>
-          <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
-
-          <input type="submit" value="Signup" />
-        </form>
-
-        <p>Already have account?
+      <React.Fragment>
+        <div className="signupform">
+          <h1>Sign Up</h1>
+          <form className="formctn" onSubmit={this.handleFormSubmit}>
+            <div className="form-group">
+              <label for="signupEmail">Email:</label>
+              <input type="email" className="form-control" name="email" value={this.state.username} id="loginEmail" onChange={ e => this.handleChange(e)}/>
+            </div>
+            <div className="form-group">
+              <label for="signupPassword">Password:</label>
+              <input type="password" className="form-control" name="password" value={this.state.password} id="signupPassword" onChange={ e => this.handleChange(e)} />
+            </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
+          <p>Already have account?
             <Link to={"/login"}> Login</Link>
-        </p>
-
-      </div>
+          </p>
+        </div>
+      </React.Fragment>
     );
   }
 }

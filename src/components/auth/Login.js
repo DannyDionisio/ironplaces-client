@@ -28,15 +28,15 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Login</h1>
-        <div>
-          <form onSubmit={this.handleFormSubmit}>
+        <div className="loginform">
+          <h1>Login</h1>
+          <form className="formctn" onSubmit={this.handleFormSubmit}>
             <div className="form-group">
-              <label for="loginEmail">Email</label>
+              <label for="loginEmail">Email:</label>
               <input type="email" className="form-control" name="email" value={this.state.email} id="loginEmail" onChange={ e => this.handleChange(e)}/>
             </div>
             <div className="form-group">
-              <label for="loginPassword">Password</label>
+              <label for="loginPassword">Password:</label>
               <input type="password" className="form-control" name="password" value={this.state.password} id="loginPassword" onChange={ e => this.handleChange(e)}/>
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>

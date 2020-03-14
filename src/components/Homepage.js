@@ -3,6 +3,9 @@ import logo from '../logo.svg';
 import garfo from '../garfo.svg';
 import cama from '../cama.svg';
 import cinema from '../cinema.svg';
+import creport from '../course-report.svg';
+import switchup from '../switchup.svg';
+import florida from '../florida-education.svg';
 
 class Homepage extends Component {
   render() {
@@ -34,7 +37,20 @@ class Homepage extends Component {
         </div>
         <footer className="footer">
           <h1>Home > All Ironhack Campuses > Ironhack Lisbon</h1>
-          
+          <div className="footer-container">
+            <div className="allrights">
+              <img src={logo} alt="logo"/>
+              <p>990 Biscayne Blvd. Ste 503 - Miami FL 33132 <br/> © 2013-2019 Ironhack. All Rights Reserved</p>
+            </div>
+            <div className="footerimg">
+              <img src={creport} alt="creport"/>
+              <img src={switchup} alt="switchup"/>
+              <div className="floridactn">
+                <p>Licensed by:</p>
+                <img src={florida} alt="florida"/>
+              </div>
+            </div>
+          </div>
         </footer>
         </React.Fragment>
     );
