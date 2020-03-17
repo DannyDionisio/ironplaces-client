@@ -6,11 +6,13 @@ import cinema from '../cinema.svg';
 import creport from '../course-report.svg';
 import switchup from '../switchup.svg';
 import florida from '../florida-education.svg';
+import IronplacesList from "./IronplacesList";
 
 class Homepage extends Component {
   render() {
     return (
       <React.Fragment>
+        <IronplacesList />
         <header className="container-description">
             <h1>Discover Heden's Area</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere metus urna, ac aliquet arcu suscipit nec. Aliquam a magna quis ipsum tristique consectetur non eu leo. Proin scelerisque diam libero, sit amet congue erat efficitur ac. Phasellus ut dui vulputate, pretium lorem id, congue nisi. Donec non ex mattis, condimentum nibh id, dictum velit. Aliquam dignissim efficitur quam quis auctor. Fusce a lacus varius, tristique magna gravida, sagittis nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur semper justo libero, vel porta turpis viverra non. Pellentesque at dolor at ex ornare ultrices sit amet in tellus. Phasellus quis aliquam turpis.</p>

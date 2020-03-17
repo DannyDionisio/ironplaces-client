@@ -3,13 +3,13 @@ import axios from "axios";
 import { link, Link } from "react-router-dom";
 
 class IronplacesList extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = { listOfIronplaces: [] };
     }
 
     getAllIronplaces = () => {
-        axios.get(`http://localhost:5000/api/ironplaces`)
+        axios.get(`http://localhost:5000/api/places?`)
         .then(responseFromApi => {
             this.setState ({
                 listOfIronplaces: responseFromApi.data
@@ -22,22 +22,16 @@ class IronplacesList extends Component {
     }
 
     render() {
-        const arrayOfPlaces = this.state.listOfIronplaces.map( listOfIronplaces => {
+        return this.state.listOfIronplaces.map( listOfIronplaces => {
             return (
-                <div key={IronplacesList._id}>
-                    <Link to={`/ironplaces/${IronplacesList._id}`}>
-                        <h1>{IronplacesList.name}</h1>
+                <div key={listOfIronplaces._id}>
+                    <Link to={`/ironplaces/${listOfIronplaces._id}`}>
+                        <h1>{listOfIronplaces.name}</h1>
                     </Link>
                 </div>
             );
         });
     }
-
 }
-
-
-
-
-
 
 export default IronplacesList;
