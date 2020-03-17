@@ -21,7 +21,7 @@ class AddIronplaces extends Component {
     const coordinates = this.state.coordinates;
     const description = this.state.description;
     const headers = {'Authorization': this.props.jwt};
-    axios.post("http://localhost:5000/api/addplace", { name, type, address, coordinates, description }, {headers:headers})
+    axios.post("https://ironplaces-server.herokuapp.com/api/addplace", { name, type, address, coordinates, description }, {headers:headers})
     .then( () => {
       this.setState({name: "", type: "", address: "", coordinates: "", description: ""});
       // after submitting the form, redirect to homepage

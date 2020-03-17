@@ -9,7 +9,7 @@ class IronplacesList extends Component {
     }
 
     getAllIronplaces = () => {
-        axios.get(`http://localhost:5000/api/places?`)
+        axios.get(`https://ironplaces-server.herokuapp.com/api/places?`)
         .then(responseFromApi => {
             this.setState ({
                 listOfIronplaces: responseFromApi.data
