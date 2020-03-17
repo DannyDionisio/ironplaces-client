@@ -20,6 +20,7 @@ class Navbar extends Component {
         <React.Fragment>
           <li>Welcome, {loggedInUser.email}</li>
           <li><Link to="/" onClick={logoutFbase}>Log Out</Link></li>
+          <li><Link to="/login/adminview">Admin View</Link></li>
         </React.Fragment>
       );
     }
