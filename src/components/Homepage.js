@@ -7,6 +7,7 @@ import creport from '../course-report.svg';
 import switchup from '../switchup.svg';
 import florida from '../florida-education.svg';
 import IronplacesList from "./IronplacesList";
+import MapContainer from "./MapContainer";
 
 class Homepage extends Component {
   constructor(props) {
@@ -42,7 +43,9 @@ class Homepage extends Component {
         </div>
         <div className="searchctn">
           <div className="ironplaceslist"><IronplacesList type={this.state.type} /></div>
-          <div className="googlemaps">GOOGLE MAPS</div>
+          <div className="googlemaps">
+            <MapContainer/>
+          </div>
         </div>
         <footer className="footer">
           <h1>Home > All Ironhack Campuses > Ironhack Lisbon</h1>
