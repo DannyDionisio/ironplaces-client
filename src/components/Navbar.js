@@ -35,13 +35,11 @@ class Navbar extends Component {
           </Link>
           <div className="dropdown">
             <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Login
+              Menu
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               {this.renderAuthLinks()}
-              {/* <li><Link to="/projects">Projects</Link></li> */}
-              <Link to={`/login`} className="dropdown-item" href="/login/admin">Admin</Link>
-              <Link to={`/login`} className="dropdown-item" href="/login/student">Student</Link>
+              
             </div>
           </div>
         </div>

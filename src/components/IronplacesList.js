@@ -3,35 +3,45 @@ import axios from "axios";
 import { link, Link } from "react-router-dom";
 
 class IronplacesList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { listOfIronplaces: [] };
-    }
+  constructor(props) {
+    super(props);
+    this.state = { listOfIronplaces: [] };
+  }
 
-    getAllIronplaces = () => {
-        axios.get(`https://ironplaces-server.herokuapp.com/api/places?`)
-        .then(responseFromApi => {
-            this.setState ({
-                listOfIronplaces: responseFromApi.data
-            })
-        })
-    }
+  getAllIronplaces = () => {
+    let type = "";
 
-    componentDidMount() {
-        this.getAllIronplaces();
-    }
+    if (this.props.type) type = "type=" + this.props.type;
 
-    render() {
-        return this.state.listOfIronplaces.map( listOfIronplaces => {
-            return (
-                <div key={listOfIronplaces._id}>
-                    <Link to={`/ironplaces/${listOfIronplaces._id}`}>
-                        <h1>{listOfIronplaces.name}</h1>
-                    </Link>
-                </div>
-            );
+    axios
+      .get(`https://ironplaces-server.herokuapp.com/api/places?` + type)
+      .then(responseFromApi => {
+        this.setState({
+          listOfIronplaces: responseFromApi.data
         });
-    }
+      });
+  };
+
+  componentDidMount() {
+    this.getAllIronplaces();
+  }
+
+  componentDidUpdate() {
+    this.getAllIronplaces();
+    console.log("test")
+  }
+
+  render() {
+    return this.state.listOfIronplaces.map(listOfIronplaces => {
+      return (
+        <div key={listOfIronplaces._id}>
+          <Link to={`/ironplaces/${listOfIronplaces._id}`}>
+            <h1>{listOfIronplaces.name}</h1>
+          </Link>
+        </div>
+      );
+    });
+  }
 }
 
 export default IronplacesList;

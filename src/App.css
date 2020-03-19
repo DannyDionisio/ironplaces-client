@@ -110,19 +110,6 @@ body {
   padding: 20px 0 150px;
 }
 
-.search-container input {
-  height: 40px;
-  border-radius: 5px;
-  margin-right: 20px;
-}
-
-.search-container button {
-  height: 40px;
-  border-radius: 5px;
-  background-color: #2dc5fa;
-  color: #fff;
-}
-
 .categories-ctn {
   display: flex;
   flex-direction: row;
@@ -130,6 +117,12 @@ body {
   background-color: #fff;
   margin: 0 100px;
   z-index: -10;
+}
+
+.searchctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .categories {
