@@ -8,7 +8,8 @@ class AddIronplaces extends Component {
         name: "", 
         type: "",
         address: "",
-        coordinates: "",
+        latitude: "",
+        longitude: "",
         description: "" 
     };
   }
@@ -18,12 +19,13 @@ class AddIronplaces extends Component {
     const name = this.state.name;
     const type = this.state.type;
     const address = this.state.address;
-    const coordinates = this.state.coordinates;
+    const latitude = this.state.latitude;
+    const longitude = this.state.longitude;
     const description = this.state.description;
     const headers = {'Authorization': this.props.jwt};
-    axios.post("https://ironplaces-server.herokuapp.com/api/addplace", { name, type, address, coordinates, description }, {headers:headers})
+    axios.post("https://ironplaces-server.herokuapp.com/api/addplace", { name, type, address, latitude, longitude, description }, {headers:headers})
     .then( () => {
-      this.setState({name: "", type: "", address: "", coordinates: "", description: ""});
+      this.setState({name: "", type: "", address: "", latitude: "", longitude: "", description: ""});
       // after submitting the form, redirect to homepage
       this.props.history.push('/');
     })
@@ -58,8 +60,13 @@ class AddIronplaces extends Component {
             <input type="text" className="form-control" id="address" name="address" value={this.state.address} onChange={e => this.handleChange(e)}/>
           </div>
           <div className="form-group">
-            <label for="coordinates">Coordinates:</label>
-            <input type="text" className="form-control" id="coordinates" name="coordinates" value={this.state.coordinates} onChange={e => this.handleChange(e)}/>
+            <h5>Coordinates:</h5>
+            <label for="latitude">Latitude:</label>
+            <input type="text" className="form-control" id="latitude" name="latitude" value={this.state.latitude} onChange={e => this.handleChange(e)}/>
+          </div>
+          <div className="form-group">
+            <label for="longitude">Longitude:</label>
+            <input type="text" className="form-control" id="longitude" name="longitude" value={this.state.longitude} onChange={e => this.handleChange(e)}/>
           </div>
           <div className="form-group">
             <label for="description">Description:</label>
