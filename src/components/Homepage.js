@@ -33,7 +33,7 @@ class Homepage extends Component {
                 nós ajudamos a tornar a tua vida ainda mais facil!! </p>
             <p>De forma a facilitar a tua escolha pelo nosso Campus, 
             criámos algumas parcerias ao qual entitulámos de IronPlaces. 
-            Para alem de todas as opções que encontras na cidade de Lisboa pode podes ficar, comer e divertir. 
+            Para alem de todas as opções que encontras na cidade de Lisboa podes ficar, comer e divertir. 
             Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande famila da Ironhack.</p>
           </div>
           <img src={world} alt="World"/>
