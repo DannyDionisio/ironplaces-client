@@ -122,7 +122,6 @@ body {
 .searchctn {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .categories {

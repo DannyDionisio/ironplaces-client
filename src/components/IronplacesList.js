@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { link, Link } from "react-router-dom";
+import MapContainer from "./MapContainer";
 
 class IronplacesList extends Component {
   constructor(props) {
@@ -27,20 +28,27 @@ class IronplacesList extends Component {
   }
 
   componentDidUpdate() {
-    this.getAllIronplaces();
-    console.log("test")
+    //  this.getAllIronplaces();
+    console.log("test");
   }
 
   render() {
-    return this.state.listOfIronplaces.map(listOfIronplaces => {
-      return (
-        <div key={listOfIronplaces._id}>
-          <Link to={`/ironplaces/${listOfIronplaces._id}`}>
-            <h1>{listOfIronplaces.name}</h1>
-          </Link>
+    return (
+      <div>
+        {this.state.listOfIronplaces.map(listOfIronplaces => {
+          return (
+            <div key={listOfIronplaces._id}>
+              <Link to={`/ironplaces/${listOfIronplaces._id}`}>
+                <h1>{listOfIronplaces.name}</h1>
+              </Link>
+            </div>
+          );
+        })}
+        <div>
+          <MapContainer listOfIronplaces={this.state.listOfIronplaces} />
         </div>
-      );
-    });
+      </div>
+    );
   }
 }
 

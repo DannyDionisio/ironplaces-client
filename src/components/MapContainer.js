@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import React, { Component } from "react";
+import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  width: "50%",
+  height: "50%"
 };
 export class MapContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <Map
@@ -12,14 +16,23 @@ export class MapContainer extends Component {
         zoom={14}
         style={mapStyles}
         initialCenter={{
-         lat: -1.2884,
-         lng: 36.8233
+          lat: 38.711325,
+          lng: -9.1269251
         }}
-      />
+      >
+        {this.props.listOfIronplaces.map(ironPlace => {
+          return (
+            <Marker
+              key={ironPlace._id}
+              label={ironPlace.name}
+              position={{ lat: ironPlace.latitude, lng: ironPlace.longitude }}
+            />
+          );
+        })}
+      </Map>
     );
   }
 }
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyA1hwTqs6Qq0bbKfqZVFIW915H4WzYifZI'
+  apiKey: "AIzaSyA1hwTqs6Qq0bbKfqZVFIW915H4WzYifZI"
 })(MapContainer);
-
