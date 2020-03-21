@@ -6,6 +6,8 @@ import cinema from "../cinema.svg";
 import creport from "../course-report.svg";
 import switchup from "../switchup.svg";
 import florida from "../florida-education.svg";
+import world from "../world-map.png";
+
 import IronplacesList from "./IronplacesList";
 
 class Homepage extends Component {
@@ -23,21 +25,19 @@ class Homepage extends Component {
     return (
       <React.Fragment>
         <header className="container-description">
-          <h1>Discover Heden's Area</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque posuere metus urna, ac aliquet arcu suscipit nec.
-            Aliquam a magna quis ipsum tristique consectetur non eu leo. Proin
-            scelerisque diam libero, sit amet congue erat efficitur ac.
-            Phasellus ut dui vulputate, pretium lorem id, congue nisi. Donec non
-            ex mattis, condimentum nibh id, dictum velit. Aliquam dignissim
-            efficitur quam quis auctor. Fusce a lacus varius, tristique magna
-            gravida, sagittis nunc. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Curabitur
-            semper justo libero, vel porta turpis viverra non. Pellentesque at
-            dolor at ex ornare ultrices sit amet in tellus. Phasellus quis
-            aliquam turpis.
-          </p>
+          <h1>Discover Iron Places</h1>
+          <div className="conteinerhdr">
+          <div className="texthdr">
+            <p>Junta-te a IronHack, aqui ensinamos que se acreditares em ti, podes alcançar o que quiseres! 
+                A nossa atitude de "Eu consigo fazer isto" trouxe-nos até aqui. Enfrentamos desafios constantes mas... 
+                nós ajudamos a tornar a tua vida ainda mais facil!! </p>
+            <p>De forma a facilitar a tua escolha pelo nosso Campus, 
+            criámos algumas parcerias ao qual entitulámos de IronPlaces. 
+            Para alem de todas as opções que encontras na cidade de Lisboa pode podes ficar, comer e divertir. 
+            Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande famila da Ironhack.</p>
+          </div>
+          <img src={world} alt="World"/>
+          </div>
         </header>
         <div className="container-searchbox">
           <img src={logo} alt="logo" />
