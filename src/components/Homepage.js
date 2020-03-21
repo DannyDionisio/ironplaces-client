@@ -69,9 +69,7 @@ class Homepage extends Component {
           </div>
         </div>
         <div className="searchctn">
-          <div className="ironplaceslist">
-            <IronplacesList type={this.state.type} />
-          </div>
+          <IronplacesList type={this.state.type} />
         </div>
         <footer className="footer">
           <h1>Home > All Ironhack Campuses > Ironhack Lisbon</h1>

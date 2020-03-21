@@ -122,6 +122,15 @@ body {
 .searchctn {
   display: flex;
   flex-direction: row;
+  height: 346px;
+}
+
+.ironplaceslist {
+  width: 40%;
+}
+
+.mapplaces {
+  width: 60%;
 }
 
 .categories {

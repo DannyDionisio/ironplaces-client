@@ -34,20 +34,22 @@ class IronplacesList extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.listOfIronplaces.map(listOfIronplaces => {
-          return (
-            <div key={listOfIronplaces._id}>
-              <Link to={`/ironplaces/${listOfIronplaces._id}`}>
-                <h1>{listOfIronplaces.name}</h1>
-              </Link>
-            </div>
-          );
-        })}
-        <div>
+      <React.Fragment>
+        <div className="ironplaceslist">
+          {this.state.listOfIronplaces.map(listOfIronplaces => {
+            return (
+              <div key={listOfIronplaces._id}>
+                <Link to={`/ironplaces/${listOfIronplaces._id}`}>
+                  <h1>{listOfIronplaces.name}</h1>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mapplaces">
           <MapContainer listOfIronplaces={this.state.listOfIronplaces} />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
