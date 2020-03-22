@@ -38,7 +38,7 @@ class IronplacesList extends Component {
         <div className="ironplaceslist">
           {this.state.listOfIronplaces.map(listOfIronplaces => {
             return (
-              <div key={listOfIronplaces._id}>
+              <div key={listOfIronplaces._id} className="placename">
                 <Link to={`/ironplaces/${listOfIronplaces._id}`}>
                   <h1>{listOfIronplaces.name}</h1>
                 </Link>

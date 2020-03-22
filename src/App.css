@@ -119,6 +119,8 @@ body {
 .container-searchbox {
   background-image: url(home-img.jpg);
   margin-top: 150px;
+  background-position-x: 53%;
+  background-position-y: 55%;
 }
 
 .container-searchbox img {
@@ -135,7 +137,8 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   background-color: #fff;
-  margin: 0 100px;
+  margin: 0 230px;
+  border-radius: 5px;
   z-index: -10;
 }
 
@@ -149,6 +152,11 @@ body {
   width: 40%;
 }
 
+.placename {
+  background-color: #2dc5fa;
+  color: #fff;
+}
+
 .mapplaces {
   width: 60%;
 }
@@ -158,7 +166,7 @@ body {
 }
 
 .categories:hover {
-  color: rgb(45, 197, 250);
+  background-color: #a0ebff;
   opacity: 80%;
 }
 
