@@ -1,42 +1,13 @@
 import React, { Component } from "react";
-import axios from "axios";
-import { link, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import MapContainer from "./MapContainer";
 
 class IronplacesList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { listOfIronplaces: [] };
-  }
-
-  getAllIronplaces = () => {
-    let type = "";
-
-    if (this.props.type) type = "type=" + this.props.type;
-
-    axios
-      .get(`https://ironplaces-server.herokuapp.com/api/places?` + type)
-      .then(responseFromApi => {
-        this.setState({
-          listOfIronplaces: responseFromApi.data
-        });
-      });
-  };
-
-  componentDidMount() {
-    this.getAllIronplaces();
-  }
-
-  componentDidUpdate() {
-    //  this.getAllIronplaces();
-    console.log("test");
-  }
-
   render() {
     return (
       <React.Fragment>
         <div className="ironplaceslist">
-          {this.state.listOfIronplaces.map(listOfIronplaces => {
+          {this.props.listOfIronplaces.map(listOfIronplaces => {
             return (
               <div key={listOfIronplaces._id} className="placename">
                 <Link to={`/ironplaces/${listOfIronplaces._id}`}>
@@ -47,7 +18,7 @@ class IronplacesList extends Component {
           })}
         </div>
         <div className="mapplaces">
-          <MapContainer listOfIronplaces={this.state.listOfIronplaces} />
+          <MapContainer listOfIronplaces={this.props.listOfIronplaces} />
         </div>
       </React.Fragment>
     );

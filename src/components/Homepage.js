@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import logo from "../logo.svg";
 import garfo from "../garfo.svg";
 import cama from "../cama.svg";
@@ -13,12 +14,29 @@ import IronplacesList from "./IronplacesList";
 class Homepage extends Component {
   constructor(props) {
     super(props);
-    this.state = { type: null };
+    this.state = { type: null, listOfIronplaces: [] };
   }
+
   onClickType = event => {
     this.setState({
       type: event.target.id
+    }, () => {
+      this.getIronplaces()
     });
+  };
+
+  getIronplaces = () => {
+    let type = "";
+
+    if (this.state.type) type = "type=" + this.state.type;
+
+    axios
+      .get(`https://ironplaces-server.herokuapp.com/api/places?` + type)
+      .then(responseFromApi => {
+        this.setState({
+          listOfIronplaces: responseFromApi.data
+        });
+      });
   };
 
   render() {
@@ -69,7 +87,7 @@ class Homepage extends Component {
           </div>
         </div>
         <div className="searchctn">
-          <IronplacesList type={this.state.type} />
+          <IronplacesList listOfIronplaces={this.state.listOfIronplaces} />
         </div>
         <footer className="footer">
           <h1>Home > All Ironhack Campuses > Ironhack Lisbon</h1>
