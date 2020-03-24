@@ -20,6 +20,11 @@ export class MapContainer extends Component {
           lng: -9.1269251
         }}
       >
+        <Marker
+          position={{ lat: 38.7109739, lng: -9.1261681 }}
+          title={"Ironhack"}
+          // icon="https://www.ironhack.com/assets/icons/ironhack_logos/logo.svg"
+        />
         {this.props.listOfIronplaces.map(ironPlace => {
           return (
             <Marker

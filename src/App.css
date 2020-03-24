@@ -157,7 +157,6 @@ body {
 .ironplaceslist {
   width: 40%;
   font-style: italic;
-  padding: 10px;
 }
 
 .ironplaceslist h1 {
@@ -169,7 +168,9 @@ body {
   color: #fff;
   font-style: italic;
   color: aliceblue;
-  border: inset;
+  text-align: left;
+  padding: 8px 16px;
+  margin-bottom: 8px;
 }
 
 .mapplaces {
@@ -190,9 +191,17 @@ body {
   width: 100px;
 }
 
+.placename p {
+  font-size: medium;
+}
+
 .dropdown {
   background-color: white;
   border-radius: 3px;
+}
+
+.dropdown-menu {
+  padding: 10px;
 }
 
 .btn {
@@ -250,7 +259,6 @@ body {
 
 .footerimg img {
   padding-left: 10px;
-  height: 10%;
 }
 
 .loginform,

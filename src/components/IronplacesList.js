@@ -12,6 +12,7 @@ class IronplacesList extends Component {
               <div key={listOfIronplaces._id} className="placename">
                 <h1 to={`/ironplaces/${listOfIronplaces._id}`}>
                   <h2>{listOfIronplaces.name}</h2>
+                  <p>{listOfIronplaces.discount}</p>
                 </h1>
               </div>
             );

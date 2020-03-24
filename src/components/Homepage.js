@@ -110,8 +110,8 @@ class Homepage extends Component {
               </p>
             </div>
             <div className="footerimg">
-              <img height="56px" src={creport} alt="creport" />
-              <img height="56px" src={switchup} alt="switchup" />
+              <img src={creport} alt="creport" />
+              <img src={switchup} alt="switchup" />
               <div className="floridactn">
                 <p>Licensed by:</p>
                 <img src={florida} alt="florida" />
