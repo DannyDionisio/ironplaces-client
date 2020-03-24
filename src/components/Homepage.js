@@ -18,11 +18,14 @@ class Homepage extends Component {
   }
 
   onClickType = event => {
-    this.setState({
-      type: event.target.id
-    }, () => {
-      this.getIronplaces()
-    });
+    this.setState(
+      {
+        type: event.target.id
+      },
+      () => {
+        this.getIronplaces();
+      }
+    );
   };
 
   getIronplaces = () => {
@@ -45,16 +48,23 @@ class Homepage extends Component {
         <header className="container-description">
           <h1>Discover Ironplaces</h1>
           <div className="conteinerhdr">
-          <div className="texthdr">
-            <p>Junta-te a Ironhack, aqui ensinamos que se acreditares em ti, podes alcançar o que quiseres! 
-                A nossa atitude de "Eu consigo fazer isto" trouxe-nos até aqui. Enfrentamos desafios constantes mas... 
-                Nós ajudamos a tornar a tua vida ainda mais fácil! </p>
-            <p>De forma a facilitar a tua escolha pelo nosso Campus, 
-            criámos algumas parcerias ao qual intitulamos de Ironplaces. 
-            Para além de todas as opções que encontras na cidade de Lisboa onde podes ficar, comer e divertir. 
-            Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande família da Ironhack.</p>
-          </div>
-          <img src={world} alt="World"/>
+            <div className="texthdr">
+              <p>
+                Junta-te a Ironhack, aqui ensinamos que se acreditares em ti,
+                podes alcançar o que quiseres! A nossa atitude de "Eu consigo
+                fazer isto" trouxe-nos até aqui. Enfrentamos desafios constantes
+                mas... Nós ajudamos a tornar a tua vida ainda mais fácil!{" "}
+              </p>
+              <p>
+                De forma a facilitar a tua escolha pelo nosso Campus, criámos
+                algumas parcerias ao qual intitulamos de Ironplaces. Para além
+                de todas as opções que encontras na cidade de Lisboa onde podes
+                ficar, comer e divertir. Estes são locais de eleição onde
+                poderás ter descontos por pertencer a esta grande família da
+                Ironhack.
+              </p>
+            </div>
+            <img src={world} alt="World" />
           </div>
         </header>
         <div className="container-searchbox">
@@ -93,15 +103,15 @@ class Homepage extends Component {
           <h1>Home > All Ironhack Campuses > Ironhack Lisbon</h1>
           <div className="footer-container">
             <div className="allrights">
-              <img src={logo} alt="logo" />
+              <img height="56px" src={logo} alt="logo" />
               <p>
                 990 Biscayne Blvd. Ste 503 - Miami FL 33132 <br /> © 2013-2019
                 Ironhack. All Rights Reserved
               </p>
             </div>
             <div className="footerimg">
-              <img src={creport} alt="creport" />
-              <img src={switchup} alt="switchup" />
+              <img height="56px" src={creport} alt="creport" />
+              <img height="56px" src={switchup} alt="switchup" />
               <div className="floridactn">
                 <p>Licensed by:</p>
                 <img src={florida} alt="florida" />

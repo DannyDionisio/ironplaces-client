@@ -151,7 +151,7 @@ body {
 .searchctn {
   display: flex;
   flex-direction: row;
-  height: 346px;
+  height: 461px;
 }
 
 .ironplaceslist {
@@ -174,11 +174,11 @@ body {
 
 .mapplaces {
   width: 60%;
-  
 }
 
 .categories {
   padding: 0px 50px;
+  cursor: pointer;
 }
 
 .categories:hover {
@@ -192,12 +192,12 @@ body {
 
 .dropdown {
   background-color: white;
+  border-radius: 3px;
 }
 
 .btn {
   color: rgb(4, 13, 87);
   width: 100%;
-  
 }
 
 .btn:hover {
@@ -229,17 +229,14 @@ body {
   flex-direction: row;
 }
 
-.allrights img {
-  height: 10%;
-}
-
 .allrights p {
   color: rgba(255, 255, 255, 0.4);
   font: 12px Roboto;
   margin: 10px 20px;
 }
 
-.footerimg, .floridactn {
+.footerimg,
+.floridactn {
   display: flex;
   flex-direction: row;
 }
@@ -253,10 +250,11 @@ body {
 
 .footerimg img {
   padding-left: 10px;
-  height: 10%
+  height: 10%;
 }
 
-.loginform, .signupform {
+.loginform,
+.signupform {
   color: #fff;
   margin: 0 35%;
   flex-direction: column;
