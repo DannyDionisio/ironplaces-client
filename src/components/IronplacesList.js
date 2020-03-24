@@ -10,9 +10,9 @@ class IronplacesList extends Component {
           {this.props.listOfIronplaces.map(listOfIronplaces => {
             return (
               <div key={listOfIronplaces._id} className="placename">
-                <Link to={`/ironplaces/${listOfIronplaces._id}`}>
-                  <h1>{listOfIronplaces.name}</h1>
-                </Link>
+                <h1 to={`/ironplaces/${listOfIronplaces._id}`}>
+                  <h2>{listOfIronplaces.name}</h2>
+                </h1>
               </div>
             );
           })}

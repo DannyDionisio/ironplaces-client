@@ -43,7 +43,7 @@ body {
     no-repeat;
   background-color: rgb(248, 248, 248);
   background-position: 123px -409px;
-  background-size: 81%;
+  background-size: 89%;
 }
 
 .main-container {
@@ -156,19 +156,29 @@ body {
 
 .ironplaceslist {
   width: 40%;
+  font-style: italic;
+  padding: 10px;
+}
+
+.ironplaceslist h1 {
+  color: rgb(255, 255, 255);
 }
 
 .placename {
-  background-color: #2dc5fa;
+  background-color: rgb(45, 53, 76);
   color: #fff;
+  font-style: italic;
+  color: aliceblue;
+  border: inset;
 }
 
 .mapplaces {
   width: 60%;
+  
 }
 
 .categories {
-  padding: 20px 50px;
+  padding: 0px 50px;
 }
 
 .categories:hover {
@@ -217,6 +227,10 @@ body {
 .allrights {
   display: flex;
   flex-direction: row;
+}
+
+.allrights img {
+  height: 10%;
 }
 
 .allrights p {
