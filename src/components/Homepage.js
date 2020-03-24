@@ -43,7 +43,7 @@ class Homepage extends Component {
     return (
       <React.Fragment>
         <header className="container-description">
-          <h1>Discover Iron Places</h1>
+          <h1>Discover Ironplaces</h1>
           <div className="conteinerhdr">
           <div className="texthdr">
             <p>Junta-te a Ironhack, aqui ensinamos que se acreditares em ti, podes alcançar o que quiseres! 
@@ -51,7 +51,7 @@ class Homepage extends Component {
                 Nós ajudamos a tornar a tua vida ainda mais fácil! </p>
             <p>De forma a facilitar a tua escolha pelo nosso Campus, 
             criámos algumas parcerias ao qual intitulamos de Ironplaces. 
-            Para além de todas as opções que encontras na cidade de Lisboa podes ficar, comer e divertir. 
+            Para além de todas as opções que encontras na cidade de Lisboa onde podes ficar, comer e divertir. 
             Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande família da Ironhack.</p>
           </div>
           <img src={world} alt="World"/>
