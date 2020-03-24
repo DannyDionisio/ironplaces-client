@@ -67,10 +67,10 @@ class AddIronplaces extends Component {
               />
             </div>
             <div className="form-group">
-              <label for="typeoptions">Type:</label>
+              <label for="type">Type:</label>
               <select
                 className="form-control"
-                id="typeoptions"
+                id="type"
                 name="type"
                 value={this.state.type}
                 onChange={e => this.handleChange(e)}
