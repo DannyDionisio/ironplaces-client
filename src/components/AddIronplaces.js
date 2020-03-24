@@ -10,7 +10,7 @@ class AddIronplaces extends Component {
       address: "",
       latitude: "",
       longitude: "",
-      description: ""
+      discount: ""
     };
   }
 
@@ -21,12 +21,12 @@ class AddIronplaces extends Component {
     const address = this.state.address;
     const latitude = this.state.latitude;
     const longitude = this.state.longitude;
-    const description = this.state.description;
+    const discount = this.state.discount;
     const headers = { Authorization: this.props.jwt };
     axios
       .post(
         "https://ironplaces-server.herokuapp.com/api/addplace",
-        { name, type, address, latitude, longitude, description },
+        { name, type, address, latitude, longitude, discount },
         { headers: headers }
       )
       .then(() => {
@@ -36,7 +36,7 @@ class AddIronplaces extends Component {
           address: "",
           latitude: "",
           longitude: "",
-          description: ""
+          discount: ""
         });
         // after submitting the form, redirect to homepage
         this.props.history.push("/");
