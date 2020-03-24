@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import logo from "../logo.svg";
+import logo from "../IRONPLACES-LOGO.png";
 import garfo from "../garfo.svg";
 import cama from "../cama.svg";
 import cinema from "../cinema.svg";
@@ -46,13 +46,13 @@ class Homepage extends Component {
           <h1>Discover Iron Places</h1>
           <div className="conteinerhdr">
           <div className="texthdr">
-            <p>Junta-te a IronHack, aqui ensinamos que se acreditares em ti, podes alcançar o que quiseres! 
+            <p>Junta-te a Ironhack, aqui ensinamos que se acreditares em ti, podes alcançar o que quiseres! 
                 A nossa atitude de "Eu consigo fazer isto" trouxe-nos até aqui. Enfrentamos desafios constantes mas... 
-                nós ajudamos a tornar a tua vida ainda mais facil!! </p>
+                Nós ajudamos a tornar a tua vida ainda mais fácil! </p>
             <p>De forma a facilitar a tua escolha pelo nosso Campus, 
-            criámos algumas parcerias ao qual entitulámos de IronPlaces. 
-            Para alem de todas as opções que encontras na cidade de Lisboa podes ficar, comer e divertir. 
-            Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande famila da Ironhack.</p>
+            criámos algumas parcerias ao qual intitulamos de Ironplaces. 
+            Para além de todas as opções que encontras na cidade de Lisboa podes ficar, comer e divertir. 
+            Estes são locais de eleição onde poderás ter descontos por pertencer a esta grande família da Ironhack.</p>
           </div>
           <img src={world} alt="World"/>
           </div>
